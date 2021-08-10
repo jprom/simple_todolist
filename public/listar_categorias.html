@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Responsive Sidebar Dashboard Template</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/plugins/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="../css/plugins/datatables/simpleDataTable.css">
+    <link rel="stylesheet" href="../css/super_admin/side_menu_general.css">
+    <link rel="stylesheet" href="../css/plugins/dropdown_sidebar_menu/dropdown_menu.css">
+    <link rel="stylesheet" href="../css/super_admin/listar_categorias.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+    </style>
+
+
+</head>
+
+<body>
+    <!--header inicio-->
+    <input type="checkbox" id="check">
+    <header id="header_dashboard">
+        <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+        <div class="left_area">
+            <h3>Super <span>Admin</span></h3>
+        </div>
+        <div class="right_area">
+            <a href="#" class="logout_btn">Cerrar sesi&oacute;n</a>
+        </div>
+    </header>
+    <!--header fin-->
+    <!--sidebar inicio-->
+    <div class="sidebar">
+        <div class="profile_info">
+            <img src="../img/Super_admin/profile.png" class="profile_image" alt="">
+
+            <h4>Nombre Super admin</h4>
+        </div>
+        <a href="dashboard.html"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+        <a href="perfil.html"><i class="fas fa-cogs"></i><span>Perfil</span></a>
+        <a href="#" class="dropdown-btn"></i> <i class="fas fa-table"></i><span>Reportes </span> <i class="fa fa-caret-right"></i></a>
+        <div class="dropdown-container">
+            <a href="ganancias_generales.html">Ganancias generales</a>
+            <a href="ganancias_restaurante.html">Ganancias por restaurante</a>
+            <a href="platillos_mas_vendidos.html">Platillos mas vendidos</a>
+        </div>
+        <a href="impuestos.html"><i class="fas fa-money-check-alt"></i><span>Impuestos</span></a>
+        <a href="#" class="dropdown-btn"><i class="fab fa-stack-exchange"></i><span>Comentarios</span> <i class="fa fa-caret-right"></i></a>
+        <div class="dropdown-container">
+            <a href="listar_comentarios.html">Lista de comentarios</a>
+        </div>
+        <a href="#" class="dropdown-btn"><i class="fas fa-bullseye"></i><span>Platillos</span> <i class="fa fa-caret-right"></i></a>
+        <div class="dropdown-container">
+            <a href="listar_categorias.html">Ver categorias</a>
+            <a href="listar_caracteristicas_especiales.html">Ver caracteristicas especiales</a>
+        </div>
+        <a href="listar_usuarios.html"><i class="fas fa-users"></i><span>Usuarios</span></a>
+    </div>
+    <!--sidebar fin-->
+
+    <section class="content">
+        <div class="content-container">
+            <h1>Categorias</h1>
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-create-position btn-custom-generic" id="btn-create-category">Crear categoria</button>
+                </div>
+            </div>
+            <table class="table table-row-color" id="tbl-listar-categorias">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Categoria</th>
+                        <th>Descripcion</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td scope="row">1</td>
+                        <td>Desayuno</td>
+                        <td>Paltillos para desayunar</td>
+                        <td>Activo</td>
+                        <td>
+                            <div>
+                                <button class="btn btn-deshabilitar" data-id="1"><i class="fas fa-ban"></i> Deshabilitar</button>
+                                <button class="btn btn-editar"><i class="fas fa-edit"></i> Editar</button>
+                                <button class="btn btn-borrar" data-id="1"><i class="fas fa-minus-circle"></i> Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">2</td>
+                        <td>Almuerzo</td>
+                        <td>Platillos para almorzar</td>
+                        <td>Activo</td>
+                        <td>
+                            <div>
+                                <button class="btn btn-deshabilitar" data-id="2"><i class="fas fa-ban"></i> Deshabilitar</button>
+                                <button class="btn btn-editar"><i class="fas fa-edit"></i> Editar</button>
+                                <button class="btn btn-borrar" data-id="2"><i class="fas fa-minus-circle"></i> Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">3</td>
+                        <td>Plato fuerte</td>
+                        <td>Plato principal</td>
+                        <td>Activo</td>
+                        <td>
+                            <div>
+                                <button class="btn btn-deshabilitar" data-id="3"><i class="fas fa-ban"></i> Deshabilitar</button>
+                                <button class="btn btn-editar"><i class="fas fa-edit"></i> Editar</button>
+                                <button class="btn btn-borrar" data-id="3"><i class="fas fa-minus-circle"></i> Eliminar</button>
+                            </div>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+    <script src="../js/plugins/jquery/jquery.min.js" charset="utf-8"></script>
+    <script src="../js/plugins/dropdown_buttons_side_menu/dropdown_menu.js"></script>
+    <script src="../js/plugins/datatables/simple-datatable.js"></script>
+    <script src="../js/plugins/sweet_alert/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="../js/super_admin/servicios/categoria.servicio.js"></script>
+    <script src="../js/super_admin/controladores/categoria.controlador.js"></script>
+
+    <script src="../js/logout.js"></script>
+
+</body>
+
+</html>
