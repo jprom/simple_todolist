@@ -50,9 +50,4 @@ function handleError(res, reason, message, code) {
 }
 
 // Conexión a todas la rutas.
-app.use('/api', require('./routes/comentarios.route'));
-app.use('/api', require('./routes/usuarios.route'));
-app.use('/api', require('./routes/medios_de_contacto.route'));
-app.use('/api', require('./routes/logins.route'));
-app.use('/api', require('./routes/reservaciones.route'));
-app.use('/api', require('./routes/categorias.route'));
+app.use('/api', require('./routes/tareas.route'));

@@ -14,36 +14,99 @@
 <body>
     <main>
         <section class="form-container">
-            <div class="row">
-                <div class="col-4">
-                    <div class="form-group">
-                        <label for="input-fecha">
-                            Fecha:
-                        </label>
-                        <input type="datetime-local" id="input-nombre" class="form-input form-control">
+            <div class="container-full-width">
+                <div class="row">
+                    <div class="col-md-4">
+                        <fieldset>
+                            <div class="form_main">
+                                <h4 class="heading"><strong>Crear </strong> Tarea <span></span></h4>
+                                <div class="form">
+                                    <div>
+                                        <div id="contenedor-imagen">
+                                            <img src="" id="img-foto">
+                                        </div>
+                                    </div>
+                                    <input type="datetime-local" id="input-fecha" class="form-input form-control txt" placeholder="Fecha">
+                                    <input type="text" id="input-nombre" class="form-input form-control txt" placeholder="Nombre tarea">
+                                    <input type="text" id="input-encargado" class="form-input form-control txt" placeholder="Encargado">
+                                    <div class="wrapper">
+                                        <div class="toggle_radio">
+                                            <input type="radio" class="toggle_option" id="first_toggle" name="prioridad" value="Baja">
+                                            <input type="radio" checked class="toggle_option" id="second_toggle" name="prioridad" value="Media">
+                                            <input type="radio" class="toggle_option" id="third_toggle" name="prioridad" value="Alta">
+                                            <label for="first_toggle"><p>Prioridad baja</p></label>
+                                            <label for="second_toggle"><p>Prioridad media</p></label>
+                                            <label for="third_toggle"><p>Prioridad alta</p></label>
+                                            <div class="toggle_option_slider">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <textarea id="input-descripcion" class="form-input form-control txt_3" cols="30" rows="10" placeholder="Descripcion"></textarea>
+                                    <div class="row upload-image-container">
+                                        <div class="col-12 text-center">
+                                            <button type="button" id="btn-foto" class="btn btn-aprobar upload-img-btn">Subir imagen</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="row upload-image-container">
+                                        <div class="col-12 text-center">
+                                            <input type="submit" value="submit" name="submit" class="submit-btn">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </fieldset>
+
                     </div>
-                    <div class="form-group">
-                        <label for="input-fecha">
-                            Fecha:
-                        </label>
-                        <input type="text" id="input-date" class="form-input form-control">
+                    <div class="col-8">
+                        <div class="container-lg">
+                            <div class="col-12">
+                                <table class="table table-row-color">
+                                    <thead>
+                                        <th>
+                                            #
+                                        </th>
+                                        <th>
+                                            Nombre tarea
+                                        </th>
+                                        <th>
+                                            Encargado
+                                        </th>
+                                        <th>
+                                            Descripci&oacute;n
+                                        </th>
+                                        <th>
+                                            Prioridad
+                                        </th>
+                                        <th>
+                                            Foto
+                                        </th>
+                                        <th>
+                                            Acciones
+                                        </th>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="input-fecha">
-                            Fecha:
-                        </label>
-                        <input type="datetime-local" id="input-descripcion" class="form-input form-control">
-                    </div>
-                    nombre descripcion prioridad encargado imagen boton
                 </div>
             </div>
+
+
         </section>
     </main>
 
 
-
-    <script src="js/plugins/sweet_alert/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://upload-widget.cloudinary.com/global/all.js"></script>
     <script src="js/index.service.js"></script>
     <script src="js/index.controller.js"></script>
 </body>

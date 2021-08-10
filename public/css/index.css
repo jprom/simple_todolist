@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --examen-light-blue: #D1F1FC;
+    --examen-light: #F0FBFD;
+    --examen-blue: #39B3E6;
+    --examen-green: #7BDF43;
+    --examen-brown: #755A2B;
+}
+
+form_main {
+    width: 100%;
+}
+
+.form_main h4 {
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.heading {
+    border-bottom: 2px solid var(--examen-green);
+    padding-bottom: 9px;
+    position: relative;
+}
+
+.heading span {
+    background: var(--examen-brown) none repeat scroll 0 0;
+    bottom: -2px;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 75px;
+}
+
+.form {
+    border-radius: 7px;
+    padding: 6px;
+}
+
+.txt[type="text"] {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px 0 10px 5px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.txt_3[type="text"] {
+    margin: 10px 0 0;
+    padding: 10px 0 10px 5px;
+    width: 100%;
+}
+
+.txt2[type="submit"] {
+    background: #242424 none repeat scroll 0 0;
+    border: 1px solid #4f5c04;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 35px;
+    margin: 10px 0;
+    padding: 0;
+    text-transform: uppercase;
+    width: 30%;
+}
+
+.txt2:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #5793ef;
+    transition: all 0.5s ease 0s;
+}
+
+.upload-img-btn {
+    background-color: var(--examen-blue);
+    font-size: 0.875rem;
+    border-radius: 5px;
+    margin: auto auto;
+    width: 100%;
+}
+
+.upload-image-container {
+    margin: auto auto;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 35px;
+    margin: 10px 0;
+    padding: 0;
+    text-transform: uppercase;
+    width: 30%;
+    background-color: var(--examen-brown);
+    color: var(--examen-light);
+}
+
+
+/*Radios*/
+
+.wrapper {
+    padding: 10px;
+}
+
+.toggle_radio {
+    position: relative;
+    background: var(--examen-brown);
+    color: var(--examen-light);
+    margin: 4px auto;
+    overflow: hidden;
+    padding: 0 !important;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    height: 40px;
+    width: 320px;
+}
+
+.toggle_radio>* {
+    float: left;
+}
+
+.toggle_radio input[type=radio] {
+    display: none;
+    /*position: fixed;*/
+}
+
+.toggle_radio label {
+    font: 90%/1.618 "Source Sans Pro";
+    color: rgba(255, 255, 255, .9);
+    z-index: 0;
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin: 3px 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+    line-height: 30px;
+    text-align: center;
+}
+
+.toggle_option_slider {
+    /*display: none;*/
+    /*background: red;*/
+    width: 100px;
+    height: 35px;
+    position: absolute;
+    top: 3px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+#first_toggle:checked~.toggle_option_slider {
+    background: var(--examen-green);
+    opacity: 0.3;
+    left: 3px;
+}
+
+#second_toggle:checked~.toggle_option_slider {
+    background: var(--examen-green);
+    opacity: 0.3;
+    left: 109px;
+}
+
+#third_toggle:checked~.toggle_option_slider {
+    background: var(--examen-green);
+    opacity: 0.3;
+    left: 215px;
+}
+
+fieldset {
+    border: 1px solid var(--examen-brown);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#img-foto {
+    max-width: 400px;
+    width: 400px;
+}
+
+.error-input {
+    border: 2px solid rgb(228, 20, 20);
+}
