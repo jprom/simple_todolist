@@ -121,8 +121,8 @@ form_main {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    height: 40px;
-    width: 320px;
+    height: 42px;
+    width: 326px;
 }
 
 .toggle_radio>* {
@@ -198,5 +198,30 @@ fieldset {
 }
 
 .error-input {
-    border: 2px solid rgb(228, 20, 20);
+    border: 2px solid rgb(228, 20, 20)!important;
+}
+
+.list-img {
+    max-width: 150px;
+}
+
+.prioridad-alta {
+    font-family: 'Roboto', sans-serif;
+    background-color: red;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.prioridad-media {
+    font-family: 'Roboto', sans-serif;
+    background-color: yellow;
+    color: #000;
+    font-weight: bold;
+}
+
+.prioridad-baja {
+    font-family: 'Roboto', sans-serif;
+    background-color: green;
+    color: #FFF;
+    font-weight: bold;
 }

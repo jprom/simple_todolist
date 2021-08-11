@@ -28,7 +28,7 @@ const obtenerDatos = () => {
         }
     }
     console.log("prioridad " + prioridadValue);
-    registrar_tarea(input_fecha.value, input_nombre.value, input_encargado.value, input_nombre.value, input_descripcion.value, input_imagen.src, prioridadValue);
+    registrar_tarea(input_fecha.value, input_nombre.value, input_encargado.value, input_descripcion.value, input_imagen.src, prioridadValue);
 };
 
 
@@ -36,8 +36,16 @@ const validar = () => {
     let error = false;
 
 
-    //Solo acepte letras
-    let expReg_soloLetras = /^[a-zA-Z]+$/i;
+    //Solo acepte letras    
+    let expReg_soloLetras = new RegExp('[a-zA-Z0-9]+$');
+
+    if (input_fecha.value == '') {
+        error = true;
+        input_fecha.classList.add('error-input');
+    } else {
+        input_fecha.classList.remove('error-input');
+    }
+
     //Validar si el nombre es vacio
     if (input_nombre.value == '' || !expReg_soloLetras.test(input_nombre.value)) {
         error = true;
@@ -61,6 +69,12 @@ const validar = () => {
         input_descripcion.classList.remove('error-input');
     }
 
+    const chk_prioridad = document.querySelector('input[name="prioridad"]:checked');
+    if (chk_prioridad == null) {
+        document.querySelector('.toggle_radio').classList.add('error-input');
+    } else {
+        document.querySelector('.toggle_radio').classList.remove('error-input');
+    }
 
 
     //si existe un error, no siga y alerte al usuario
@@ -96,3 +110,5 @@ boton_foto.addEventListener("click", function() {
 
 const botonEnviar = document.querySelector('.submit-btn');
 botonEnviar.addEventListener('click', validar);
+
+listar_tarea();

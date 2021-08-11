@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/index.css">
@@ -16,7 +19,7 @@
         <section class="form-container">
             <div class="container-full-width">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <fieldset>
                             <div class="form_main">
                                 <h4 class="heading"><strong>Crear </strong> Tarea <span></span></h4>
@@ -62,10 +65,10 @@
                         </fieldset>
 
                     </div>
-                    <div class="col-8">
-                        <div class="container-lg">
+                    <div class="col-9">
+                        <div class="container-full-width">
                             <div class="col-12">
-                                <table class="table table-row-color">
+                                <table class="table table-row-color" id="tbl-tareas">
                                     <thead>
                                         <th>
                                             #
@@ -86,7 +89,7 @@
                                             Foto
                                         </th>
                                         <th>
-                                            Acciones
+                                            Fecha
                                         </th>
                                     </thead>
                                     <tbody>
